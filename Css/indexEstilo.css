@@ -1,0 +1,567 @@
+/*
+    ------- PALETA DE COLORES -------
+    Color naranja logo #f6892a
+    Color naranja claro logo #f8b044
+    Color naranja oscuro logo #cd8129
+    Color amarillo logo #ffad33
+    Color celeste logo #38b6ff
+    Color celeste oscuro logo #3d88bf
+    Color vino logo #4e2221
+    */
+
+/*IMPORTO LA TIPOGRAFIA OPEN SANS, ROBOTO, LORA Y OSWALD*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{  
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora';
+}
+
+.videoInicio{
+    position: relative;
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.videoInicio video{
+    position: relative;
+    display: flex;
+    width: 101%;
+    mix-blend-mode: darken;
+}
+
+.videoInicio #cortina{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 50%);
+    justify-content: center;
+    align-items: center;
+}
+
+.videoInicio #cortina .contenidoC{
+    position: absolute;
+    width: 85vw;
+    height: 45vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    font-size: 27px;
+}
+
+h1{
+    width: 80%;
+    margin: 0px 0px 20px 0px;
+}
+
+.contenidoC img{
+    width: 30%;
+}
+
+#BtnC{
+    background-color: #3d88bf;
+    padding: 10px;
+    font-size: 23px;
+    border-radius: 20px;
+    color: #fff;
+    width: 220px;
+    font-family: 'Lora';
+    font-weight: bold;
+    transition: 0.85s;
+}
+
+#BtnC:hover{
+    transition: 0.85s;
+    background-color: #38b6ff;
+    color: #4e2221;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.modalV{
+    position: absolute;
+    height: 100%;
+    width: 35vw;
+    left: -500px;
+    transition: 0.65s;
+    visibility: hidden;
+    background-color: #cdeaff;
+}
+
+.modalV #cabM{
+    position: relative;
+    width: 100%;
+    background-color: #295f85;
+    padding: 5px 0px;
+}
+
+.modalV #cabM img{
+    position: relative;
+    left: 90%;
+    width: 7%;
+    transition: 0.85s;
+    cursor: pointer;
+}
+
+.modalV #cabM img:hover{
+    scale: 1.3;
+    transition: 0.85s;
+}
+
+#conM{
+    display: grid;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 1fr;
+}
+
+#titulo, #titulo2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+
+#titulo hr, #titulo2 hr{
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 90%;
+}
+
+#titulo p, #titulo2 p{  
+    position: relative;
+    margin-top: 10px;
+    left: -80px;
+    font-family: 'Open Sans';
+    font-size: 27px;
+    font-weight: bold;
+}
+
+#titulo2 p{
+    left: -90px;
+}
+
+#titulo #subi, #titulo2 #subi2{
+    left: -34px;
+    font-size: 11.9px;
+    margin: 0;
+}
+
+#titulo2 hr{
+    margin-left: 41px;
+}
+
+#titulo2{
+    left: -28px;
+}
+
+#titulo2 #subi2{
+    left: -95px;
+}
+
+#Uam, #Unam, #Ipn, #Uaem, #Teschi, #Uach, #opciones{
+    background-color: #484848b7;
+    color: #fff;
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+    margin-right: 15px;
+    border-radius: 10px;
+    padding: 10px 0px;
+    transition: 0.65s;
+}
+
+#Uam:hover,#Unam:hover, #Ipn:hover, #Uaem:hover, #Teschi:hover, #Uach:hover, #opciones:hover{
+    scale: 1.05;
+    color: black;
+    background-color: #ffad33;
+    cursor: pointer;
+    transition: 0.65s;
+}
+
+#Uam #name, #Unam #name, #Ipn #name, #Uaem #name, #Teschi #name, #Uach #name, #opciones #name{
+    position: relative;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#opciones img{
+    width: 75px;
+    background-color: #fac6f2;
+    padding: 5px 40px;
+    margin-left: 12px;
+}
+
+#opciones #exam{
+    background-color: #b1b9fc;
+}
+
+#opciones #estu{
+    background-color: #c9fcb1;
+}
+
+#opciones #foro{
+    background-color: #fce2b1;
+}
+
+#Uam img{
+    margin-left: 12px;
+    width: 130px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+#Unam img, #Teschi img{
+    margin-left: 12px;
+    width: 150px;
+}
+
+#Uach img{
+    width: 85px;
+    background-color: #fff;
+    padding: 5px 30px;
+    margin-left: 12px;
+}
+
+#Ipn img{
+    margin-left: 12px;
+    height: 89px;
+    background-color: #fff;
+    padding: 0px 45px;
+}
+
+#Uaem img{
+    margin-left: 12px;
+    height: 90px;
+    background-color: #fff;
+    padding: 0px 23px;
+}
+
+.Universidades{
+    overflow: scroll;
+    padding-bottom: 60px;
+}
+
+.Universidades::-webkit-scrollbar{
+    width: 25px;
+}
+
+.Universidades::-webkit-scrollbar-track{
+    background-image: linear-gradient(to top, #295f85 0%,  #5b99c3 100% );
+}
+
+.Universidades::-webkit-scrollbar-thumb{
+    background-color: darkgrey;
+    border-radius: 10px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+.Universidades div p{  
+    width: 90%;
+    font-family: 'Lora';
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0px;
+}
+
+#sub{
+    font-size: 12px;
+}
+
+#Marca{
+    position: absolute;
+    font-family: "Lora";
+    background-image: linear-gradient(to right, #94b2f6 0%,#af5aeb 50% , #7033ff 100%);
+    background-size: 400% 100%;
+    left: 80%;
+    top: 0%;
+    display: flex;
+    padding: 15px 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #fff;
+    scale: 0.6;
+    animation-name: oswaldo;
+    animation-duration: 4.2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#Marca img{
+    width: 100px;
+    margin: 0px 5px;
+}
+
+@keyframes oswaldo{
+    0% {
+		background-position: 0% 0%;
+	}
+	50% {
+		background-position: 50% 0%;
+	}
+	100% {
+		background-position: 100% 0%;
+	}
+}
+
+/*IMPORTO LA TIPOGRAFIA OPEN SANS, ROBOTO, LORA Y OSWALD*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lora';
+}
+
+.Cabecera{
+    position: absolute;
+    width: 100%;
+    height: 4.7vw;
+    color: #fff;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 3fr;
+    z-index: 2;
+}
+
+.Cabecera img{
+    visibility: hidden;
+}
+
+#opcionesM{
+    display: flex;
+    top: 0;
+    transition: 2s;
+}
+
+.Cabecera #opcionesM div, .Cabecera #menu{
+    transition: 0.65s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13.7px;
+    font-weight: bold;
+}
+
+.Cabecera #opcionesM div:hover, .Cabecera #menu:hover{
+    transition: 0.65s;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.Cabecera #opcionesM #est:hover{
+    background-image: linear-gradient(to right, #5f1515 0%,#f48484 80% , #f48484 100%) ;
+    background-size: 400% 100%;
+    background-position: 0%;
+}
+
+.Cabecera #uni:hover{
+    background-image: linear-gradient(to right, #9f5908 0%,#f4c084 80% , #f4c084 100%) ;
+    background-size: 400% 100%;
+    animation: colorAnim 0.7s;
+    animation-iteration-count:1;
+    animation-direction: reverse;
+}
+
+.Cabecera #quiz{
+    background-image: linear-gradient(to right, #08449f 0%,#84b1f4 80% , #84b1f4 100%) ;
+    background-size: 400% 100%;
+    animation: colorAnim 0.7s;
+    animation-iteration-count:1;
+    animation-direction: reverse;
+}
+
+.Cabecera #exam:hover{
+    background-image: linear-gradient(to right, #155f30 0%,#6a8a63 80% , #6a8a63 100%) ;
+    background-size: 400% 100%;
+    animation: colorAnim 0.7s;
+    animation-iteration-count:1;
+    animation-direction: reverse;
+}
+
+.Cabecera #foro:hover{
+    background-image: linear-gradient(to right, #3f155f 0%,#c384f4 80% , #c384f4 100%) ;
+    background-size: 400% 100%;
+    animation: colorAnim 0.7s;
+    animation-iteration-count:1;
+    animation-direction: reverse;
+}
+
+.Cabecera #menu{
+    display: flex;
+}
+
+
+@media screen and (max-width: 1200px){
+
+    #caja{
+        position: absolute;
+        visibility: hidden;
+        top: 500px;
+        z-index: 2;
+    }
+
+    .Cabecera{
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+        z-index: 1;
+    }
+
+    .Cabecera #opcionesM{
+        position: relative;
+        display: flex;
+        top: -360px;
+        transition: 0.65s;
+        width: 100%;
+        height: 240px;
+        flex-direction: column;
+        background: #000;
+    }
+
+    .Cabecera #opcionesM div{
+        position: relative;
+        height: 60px;
+    }
+
+    .Cabecera #menu{
+        display: flex;
+        width: 20%;
+        margin: 0px 0px;
+        height: 60px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Cabecera #menu:hover{
+        background-color: rgb(90, 90, 90);
+    }
+
+    #menu label{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Cabecera #menu label img{
+        width: 60%;
+        visibility: visible;
+    }
+
+    .videoInicio video{
+        position: relative;
+        width: 300%;
+        left: -400px;
+    }
+
+    #cortina{
+        display: flex;
+    }
+
+    #cortina .contenidoC img{
+        width: 200px;
+    }
+
+    #cortina .contenidoC h1{
+        font-size: 20px;
+    }
+
+    #Marca{
+        top: 0;
+        left: 150px;
+        scale: 0.4;
+    }
+
+    #BtnC{
+        width: 150px;
+        font-size: 18px;
+    }
+
+    #modal{
+        
+        width: 100%;
+    }
+
+    #modal #opciones{
+        width: 92%;
+        height: 100px;
+    }
+
+    #modal #opciones{
+        width: 92%;
+        height: 100px;
+    }
+
+    #name p{
+        font-size: 13px;
+    }
+
+    #name #sub{
+        font-size: 8px;
+    }
+
+    #modal #opciones img{
+        width: 150px;
+    }
+
+    #titulo2, #titulo{
+        width: 90%;
+        left: 20px;
+       *background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #titulo2 p, #titulo p{
+        position: relative;
+        left: 2px;
+        font-size: 18px;
+       *background-color: blue;
+    }
+
+    #titulo #subi , #titulo2 #subi2{
+        *background-color: gray;
+        left: 2px;
+        font-size: 10px;
+    }
+
+    #Uach{
+        width: 92%;
+        height: 100px;
+    }
+
+    #Uach img{
+        width: 100px;
+        padding: 0px 15px;
+        scale: 1.15;
+        background-color: #fff;
+    }
+
+
+}

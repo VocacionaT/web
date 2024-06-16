@@ -1,0 +1,1347 @@
+/*
+    ------- PALETA DE COLORES -------
+    Color naranja logo #f6892a
+    Color naranja claro logo #f8b044
+    Color naranja oscuro logo #cd8129
+    Color amarillo logo #ffad33
+    Color celeste logo #38b6ff
+    Color celeste oscuro logo #3d88bf
+    Color vino logo #4e2221
+    */
+
+/*IMPORTO LA TIPOGRAFIA OPEN SANS, ROBOTO, LORA Y OSWALD*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+/*--------- VER PDF ------------------*/
+
+#verPdf{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.813);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: 1s;
+    left:"100%";
+    visibility: hidden;
+}
+
+#verPdf img{
+    position: relative;
+    left: 920px;
+    width: 50px;
+    top: -300px;
+    cursor: pointer;
+    transition: 0.65s;
+}
+
+#verPdf img:hover{
+    scale: 1.3;
+    transition: 0.65s;
+}
+
+/*------------------CSS PAGINA WEB ------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lora';
+}
+
+.Cabecera{
+    position: absolute;
+    width: 100%;
+    height: 4.7vw;
+    color: #fff;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 3fr;
+    z-index: 2;
+}
+
+.Cabecera img{
+    visibility: hidden;
+}
+
+#opcionesM{
+    display: flex;
+    top: 0;
+    transition: 2s;
+}
+
+.Cabecera #opcionesM div, .Cabecera #menu{
+    transition: 0.65s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13.7px;
+    font-weight: bold;
+}
+
+.Cabecera #opcionesM div:hover, .Cabecera #menu:hover{
+    transition: 0.65s;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.Cabecera #opcionesM #est{
+    background-image: linear-gradient(to right, #5f1515 0%,#f48484 80% , #f48484 100%) ;
+    background-size: 400% 100%;
+    background-position: 0%;
+}
+
+.Cabecera #uni:hover{
+    background-image: linear-gradient(to right, #9f5908 0%,#f4c084 80% , #f4c084 100%) ;
+    background-size: 400% 100%;
+    animation: colorAnim 0.7s;
+    animation-iteration-count:1;
+    animation-direction: reverse;
+}
+
+.Cabecera #quiz:hover{
+    background-image: linear-gradient(to right, #08449f 0%,#84b1f4 80% , #84b1f4 100%) ;
+    background-size: 400% 100%;
+    animation: colorAnim 0.7s;
+    animation-iteration-count:1;
+    animation-direction: reverse;
+}
+
+.Cabecera #exam:hover{
+    background-image: linear-gradient(to right, #155f30 0%,#6a8a63 80% , #6a8a63 100%) ;
+    background-size: 400% 100%;
+    animation: colorAnim 0.7s;
+    animation-iteration-count:1;
+    animation-direction: reverse;
+}
+
+/* ----------- ANIMACION MATERIAL DE ESTUDIO -----------------
+
+.Cabecera #est:hover{
+    background-image: linear-gradient(to right, #5f1515 0%,#f48484 80% , #f48484 100%) ;
+    background-size: 400% 100%;
+    animation: colorAnim 0.7s;
+    animation-iteration-count:1;
+    animation-direction: reverse;
+} 
+*/
+
+.Cabecera #foro:hover{
+    background-image: linear-gradient(to right, #3f155f 0%,#c384f4 80% , #c384f4 100%) ;
+    background-size: 400% 100%;
+    animation: colorAnim 0.7s;
+    animation-iteration-count:1;
+    animation-direction: reverse;
+}
+
+@keyframes colorAnim {
+    0%{
+        background-position: 0%;
+    }
+
+    100%{
+        background-position: 100%;
+    }
+}
+
+#sec1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#cortinaN{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+#cortinaN p{
+    opacity: 100%;
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Oswald';
+    font-weight: bolder;
+}
+
+#sec1 video{
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    mix-blend-mode: darken;
+}
+
+#sec2{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #5e1530;
+    background-position: bottom center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#sec3{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #1C3D6C;
+    background-position: bottom center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#tituloIpn, #tituloUnam, #tituloUam, #tituloUAEM, #tituloTESCHI, #tituloUACH{
+    position: relative;
+    width: 65%;
+    top: 4vh;
+    left: 5vh;
+    padding:0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#tituloIpn p, #tituloUnam p, #tituloUam p, #tituloUAEM p, #tituloTESCHI p,
+#tituloUACH p{
+    font-family: 'Open Sans';
+    font-weight: bolder;
+    letter-spacing: -3px;
+    font-size: 100px;
+    text-align: center;
+    color:#fff;
+    line-height: 105px;
+}
+
+#tituloIpn h1, #tituloUnam h1, #tituloUam h1, #tituloUAEM h1, #tituloTESCHI h1, #tituloUACH h1{
+    color:#fff;
+    text-align: center;
+    font-family: 'Roboto Mono';
+    font-weight: bolder;
+    font-size: 15px;
+    margin-top: 5px;
+    background-color: #000;
+    padding: 10px 20px;
+    width: 70%;
+}
+
+#tituloUam h1{
+    background-color: #fff;
+    color: #000;
+}
+
+#tituloTESCHI p{
+    color: #000;
+}
+
+#tituloUam, #tituloTESCHI{
+    top: 0;
+}
+
+#tituloTESCHI{
+    z-index: 1;
+}
+
+#sec2 #logoI, #sec3 #logoUnam, #sec4 #logoUam, #sec5 #logoUAEM, #sec6 #logoTESCHI
+, #sec7 #logoUACH{
+    position: relative;
+    width: 70vh;
+    height: auto;
+    left: 115vh;
+    top: -32vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sec2 #logoI img, #sec3 #logoUnam img, #sec4 #logoUam img, #sec5 #logoUAEM img
+, #sec6 #logoTESCHI img, #sec7 #logoUACH img{
+    position: relative;
+    width: 450px;
+}
+
+#sec7 #logoUACH img{
+    width: 270px;
+}
+
+#sec6 #logoTESCHI img{
+    width: 450px;
+}
+
+#sec5 #logoUAEM img{
+    width: 350px;
+}
+
+#sec5 #logoUAEM{
+    top: -260px;
+}
+
+
+#sec2 #guiaIpn, #sec3 #guiaUnam{
+    position: relative;
+    width: 100vh;
+    height: auto;
+    top: -83vh;
+    left: 10vh;
+    *background-color: #000;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#sec2 #guiaIpn div, #sec3 #guiaUnam div{
+    position: relative;
+    *border: solid #fff 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sec2 #guiaIpn img, #sec3 #guiaUnam img{
+    width: 290px;
+}
+
+#descargaI, #descargaUnam{
+    display: flex;
+    flex-direction: column;
+}
+
+#sec2 #descargaI img, #sec3 #descargaUnam img{
+    width: 200px;
+}
+
+#sec2 #descargaI button, #sec3 #descargaUnam button{
+    background-color: #fff;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: "Lora";
+    border-radius: 30px;
+    padding: 10px 40px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+#sec2 #descargaI button:hover, #sec3 #descargaUnam button:hover{
+    transition: 0.8s;
+    background-color: #000;
+    color: #fff;
+    padding: 13px 48px;
+    font-size: 23px;
+}
+
+#sec2 #descargaI img:hover, #sec3 #descargaUnam img:hover{
+    scale: 1.1;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+#tituloUnam{
+    left: 30%;
+}
+
+#sec3 #logoUnam{
+    top: -33vh;
+    left: 0;
+}
+
+#sec3 #logoUnam img{
+    width: 260px;
+}
+
+#guiasUnam, #guiasUam, #guiasUach{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 55%;
+    height: 55vh;
+    top: -32vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 8fr;
+    overflow: hidden;
+    border: 15px rgb(255, 255, 255) solid;
+}
+
+#guiasUam{
+    top: -170px;
+}
+
+#cabUnamDes, #cabUamDes, #cabUachDes{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#cabUnamDes .opcionesCab, #cabUamDes .opcionesCab{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 100%;
+}
+
+#cabUachDes .opcionesCab{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100%;
+}
+
+.opcionesCab li{
+    text-decoration: none;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bolder;
+    font-family: 'Open Sans';
+    border-left: rgb(123, 123, 123) solid 2px;
+    border-right: rgb(123, 123, 123) solid 2px;
+    cursor: pointer;
+    transition: 0.65s;
+}
+
+.opcionesCab li:hover{
+    scale: 1.07;
+    transition: 0.65s;
+    background-color: rgb(123, 123, 123);
+}
+
+.opcionesCab #CBS{
+    background: #1a687d;
+    /* background: #7d1a71; csh
+    background: #a24f0b; cbi
+    background: #a06519; cad
+    */
+    transition: 0.65s;
+}
+
+.opcionesCab #area1{
+    background-color: #ec3248;
+    transition: 0.65s;
+}
+
+#area1Des, #area2Des, #area3Des, #area4Des, #CBSDes, #CSHDes, #CBIDes, #CADDes
+,#FUACHDes, #HMUACHDes, #HVUACHDes{
+    background-color: #ffc8ce;
+    position: absolute;
+    top: 41px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    visibility: hidden;
+}
+
+#area1Des, #CBSDes, #FUACHDes{
+    visibility: visible;
+}
+
+#area1Des #tituloA1, #area2Des #tituloA2, #area3Des #tituloA3, #area4Des #tituloA4
+, #CBSDes #tituloCBS, #CSHDes #tituloCSH, #CBIDes #tituloCBI, #CADDes #tituloCAD,
+#FUACHDes #tituloFUACH, #HMUACHDes #tituloHMUACH, #HVUACHDes #tituloHVUACH{
+    background-color: #67131c;
+    color: #fff;
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#HVUACHDes #tituloHVUACH{
+    background-color: rgb(183, 145, 21);
+}
+
+#CSHDes #tituloCSH{
+    padding: 10px 40px;
+}
+
+#CBSDes #tituloCBS, #FUACHDes #tituloFUACH{
+    padding: 10px 40px;
+}
+
+#HMUACHDes #tituloHMUACH{
+    background-color: #0455c0;
+}
+
+#FUACHDes #tituloFUACH{
+    background: rgb(105, 146, 86);
+}
+
+#FisicaUach{
+    background: rgb(71, 107, 54);
+}
+
+#CBSDes #tituloCBS{
+    background-color: #588f8a;
+}
+
+#CSHDes #tituloCSH{
+    background-color: rgb(166, 91, 155);
+}
+
+#CBIDes #tituloCBI{
+    background-color: rgb(194, 137, 63);
+}
+
+#CADDes #tituloCAD{
+    background-color: rgb(181, 143, 46);
+}
+
+#area2Des #tituloA2{
+    background-color: #23375b;
+}
+
+#area3Des #tituloA3{
+    background-color: #b94b03;
+}
+
+#area4Des #tituloA4{
+    background-color: #4c4098;
+}
+
+#area1Des #tituloA1 img, #area2Des #tituloA2 img, #area3Des #tituloA3 img, #area4Des #tituloA4 img
+, #CBSDes #tituloCBS img, #CSHDes #tituloCSH img, #CBIDes #tituloCBI img, #CADDes #tituloCAD img
+, #FUACHDes #tituloFUACH img, #HMUACHDes #tituloHMUACH img, #HVUACHDes #tituloHVUACH img{
+    width: 130px;
+    height: 170px;
+    margin-top: 20px;
+}
+
+#area1Des #imgA1, #area2Des #imgA2, #area3Des #imgA3, #area4Des #imgA4, 
+#CBSDes #imgCBS, #CSHDes #imgCSH, #CBIDes #imgCBI, #CADDes #imgCAD,
+#FUACHDes #imgFUACH, #HMUACHDes #imgHMUACH, #HVUACHDes #imgHVUACH{
+    position: relative;
+    background-image: url(../Imagenes/unamIng.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#FUACHDes #imgFUACH{
+    background-image: url(../Imagenes/EINSTEIN.jpg);
+    background-position: left;
+}
+
+#HVUACHDes #imgHVUACH{
+    background-image: url(../Imagenes/verbal.jpeg);
+    background-position: left;
+}
+
+#HMUACHDes #imgHMUACH{
+    background-image: url(../Imagenes/razonamientoM2.jpeg);
+    background-position: 80% 100%;
+}
+
+#CBSDes #imgCBS{
+    background-image: url(../Imagenes/CBSIMG.jpg);
+}
+
+#CADDes #imgCAD{
+    background-image: url(../Imagenes/cadimg.jpg);
+    border: solid black 2px;
+}
+
+#CSHDes #imgCSH{
+    background-image: url(../Imagenes/cshImg.jpg);
+}
+
+#CBIDes #imgCBI{
+    background-image: url(../Imagenes/cbiimg.png);
+}
+
+#area2Des #imgA2{
+    background-image: url(../Imagenes/biologiaUnam.jpg);
+    background-position: -150px;
+    background-repeat: no-repeat;
+}
+
+#area3Des #imgA3{
+    background-image: url(../Imagenes/sociales.jpg);
+    background-position: -150px;
+    background-repeat: no-repeat;
+}
+
+#area4Des #imgA4{
+    background-image: url(../Imagenes/arte.jpg);
+}
+
+#area1Des #tituloA1 p, #area2Des #tituloA2 p, #area3Des #tituloA3 p, #area4Des #tituloA4 p
+, #CBSDes #tituloCBS p, #CSHDes #tituloCSH p, #CBIDes #tituloCBI p,  #CADDes #tituloCAD p,
+#FUACHDes #tituloFUACH p, #HMUACHDes #tituloHMUACH p, #HVUACHDes #tituloHVUACH p{
+    font-family: 'Lora';
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+#CSHDes #tituloCSH p{
+    font-size: 20px;
+}
+
+#area3Des #tituloA3 p{
+    margin: 0px 70px;
+}
+
+#area1Des #tituloA1 button, #area2Des #tituloA2 button, #area3Des #tituloA3 button, 
+#area4Des #tituloA4 button, #CBSDes #tituloCBS button, #CSHDes #tituloCSH button,
+#CBIDes #tituloCBI button, #CADDes #tituloCAD button,#FUACHDes #tituloFUACH button,
+#HMUACHDes #tituloHMUACH button, #HVUACHDes #tituloHVUACH button{
+    padding: 10px 25px;
+    border-radius: 20px;
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: bolder;
+    background-color: #fff;
+    transition: 0.35s;
+}
+
+#area1Des #tituloA1 button:hover, #area2Des #tituloA2 button:hover, 
+#area3Des #tituloA3 button:hover, #area4Des #tituloA4 button:hover,
+#CBSDes #tituloCBS button:hover,  #CSHDes #tituloCSH button:hover,
+#CBIDes #tituloCBI button:hover, #CADDes #tituloCAD button:hover,
+#FUACHDes #tituloFUACH button:hover, #HMUACHDes #tituloHMUACH button:hover,
+#HVUACHDes #tituloHVUACH button:hover{
+    scale: 1.1;
+    cursor: pointer;
+    transition: 0.35s;
+    background-color: #000;
+    color: #fff;
+}
+
+#sec4{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    background-position: bottom center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#sec5{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #2C5234;
+    background-position: bottom center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#guiasUAEM{
+    position: relative;
+    width: 70vh;
+    height: 53vh;
+    top: -263px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#guiaDes{
+    position: relative;
+    width: 96%;
+    height: 95%;
+    border-radius: 10px;
+    background-image: url(../Imagenes/uaemMascota.jpg);
+    background-position: 0% 40%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#controles{
+    position: relative;
+    display: flex;
+    top: 75%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#guiasUAEM #guiaDes button{
+    position: relative;
+    width: 160px;
+    height: 40px;
+    margin-top: 5px;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: bolder;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#guiasUAEM #guiaDes button:hover{
+    scale: 1.1;
+    background-color: rgb(54, 54, 54);
+}
+
+#guiasUAEM #guiaDes select{
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 5px 20px;
+}
+
+#sec6, #sec7{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 21, 255);
+    background-position: bottom center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+#sec6{
+    background-color: rgb(178, 213, 119);
+}
+
+#TESCHIDes{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vh;
+    height: 63vh;
+    top: -34vh;
+    overflow: hidden;
+}
+
+#TESCHIDes img{
+    width: 380px;
+}
+
+#TESCHIDes button{
+    height: 50px;
+    font-family: 'Open Sans';
+    font-weight: bolder;
+    border-radius: 20px;
+    font-size: 16px;
+    width: 230px;
+    color: rgb(255, 255, 255);
+    background-color: #000;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#TESCHIDes button:hover{
+    scale: 1.1;
+    background-color: rgb(48, 48, 48);
+}
+
+#separador{
+    background: #fff;
+    height: 78px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-family: "Oswald";
+    font-weight: bolder;
+}
+
+#sec7{
+    background-color: #013375;
+}
+
+.Cabecera #menu{
+    display: flex;
+}
+
+@media screen and (max-width: 1200px){
+
+    #caja{
+        position: absolute;
+        visibility: hidden;
+        top: 500px;
+        z-index: 2;
+    }
+
+    .Cabecera{
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+        z-index: 1;
+    }
+
+    .Cabecera #opcionesM{
+        position: relative;
+        display: flex;
+        top: -360px;
+        transition: 0.65s;
+        width: 100%;
+        height: 240px;
+        flex-direction: column;
+        background: #000;
+    }
+
+    .Cabecera #opcionesM div{
+        position: relative;
+        height: 60px;
+    }
+
+    .Cabecera #menu{
+        display: flex;
+        width: 20%;
+        margin: 0px 0px;
+        height: 60px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Cabecera #menu:hover{
+        background-color: rgb(90, 90, 90);
+    }
+
+    #menu label{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Cabecera #menu label img{
+        width: 60%;
+        visibility: visible;
+    }
+
+    #sec1 video{
+        top: 60px;
+        left: -15%;
+        width: 140%;
+    }
+
+    #sec1 #cortinaN{
+        height: 300px;
+        top: 60px;
+        padding: 20px;
+    }
+
+    #sec1 #cortinaN p{
+        font-size: 25px;
+    }
+
+    #sec1{
+        height: 360px;
+    }
+
+    #separador{
+        height: 40px;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    #tituloIpn, #tituloUnam, #tituloUam, #tituloUAEM, #tituloTESCHI,
+    #tituloUACH{
+        width: 100%;
+        padding: auto;
+        left: 0;
+        top: 0;
+    }
+
+    #tituloIpn p, #tituloUnam p, #tituloUam p, #tituloUAEM p, #tituloTESCHI p,
+    #tituloUACH p{
+        margin-top: 10px;
+        font-size: 40px;
+        letter-spacing: 0px;
+        line-height: 50px;
+    }
+
+    #tituloIpn h1, #tituloUnam h1, #tituloUam h1, #tituloUAEM h1, #tituloTESCHI h1,
+    #tituloUACH h1{
+        width: 85%;
+        font-size: 12px;
+    }
+
+    #sec2, #sec3, #sec4, #sec5, #sec6, #sec7{
+        height: 620px;
+    }
+    
+    #sec2 #logoI, #sec3 #logoUnam, #sec4 #logoUam, #sec5 #logoUAEM
+    , #sec6 #logoTESCHI, #sec7 #logoUACH{
+        width: 100%;
+        top: 0%;
+        left: 0%;
+        background: #fff;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #sec2 #logoI #franjaI, #sec3 #logoUnam #franjaI, 
+    #sec4 #logoUam #franjaI, #sec5 #logoUAEM #franjaI,
+    #sec6 #logoTESCHI #franjaI, #sec7 #logoUACH #franjaI{
+        position: absolute;
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        color: transparent;
+        height: 30px;
+    }
+
+    #sec2 #logoI img,  #sec3 #logoUnam img, #sec4 #logoUam img,
+    #sec5 #logoUAEM img, #sec6 #logoTESCHI img, #sec7 #logoUACH img{
+        top: 0%;
+        left: 0%;
+        width: 60px;
+        border-radius: 20px;
+        background-color: #000;
+        margin: 5px 0px;
+        padding: 10px;
+        z-index: 0;
+    }
+
+    #sec6 #logoTESCHI img{
+        width: 110px;
+    }
+
+    #sec4 #logoUam img{
+        width: 80px;
+    }
+
+    #sec2 #guiaIpn{
+        position: relative;
+        width: 100%;
+        height: 368px;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+    }
+
+    #sec2 #guiaIpn div{
+        position: relative;
+    }
+
+    #sec2 #guiaIpn div img{
+        position: absolute;
+        width: 53%;
+        top: 50px;
+        left: 20px;
+    }
+
+    #sec2 #guiaIpn #descargaI{
+        position: relative;
+        width: 140px;
+        left: 61%;
+        top: 22%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #sec2 #guiaIpn #descargaI img{
+        position: relative;
+        width: 120px;
+        top: 20px;
+        left: 0;
+    }
+
+    #sec2 #guiaIpn #descargaI button{
+        padding: 0;
+        font-size:13px;
+        width: 130px;
+        height: 35px;
+    }
+
+    #verPdf{
+        visibility: visible;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        visibility: hidden;
+    }
+
+    #verPdf #cerrar{
+        left: 40%;
+        top: -35%;
+    }
+
+    #verPdf #pdfC{
+        position: relative;
+        left: -15px;
+        top: 0;
+        width: 90%;
+        height: 410px;
+    }
+
+    /*QUITA MARCA DE AGUA*/
+
+    img[src="https://www.000webhost.com/static/default.000webhost.com/images/powered-by-000webhost.png"]{
+        display: none;
+    }
+
+    #verPdf div{
+        position: absolute;
+        width: 100%;
+        display: flex;
+        font-family: 'Lora';
+        font-weight: bolder;
+        flex-direction: column;
+        font-size: 26px;
+        text-align: center;
+        justify-content: center;
+        color: #fff;
+        align-items: center;
+    }
+
+    #descargaI a{
+        text-decoration: none;
+        font-family: 'Lora';
+        font-weight: bolder;
+        font-style: none;
+        color: #000;
+        font-size: 14px;
+    }
+
+    #verPdf div img{
+        top: 0;
+        left: 0;
+        margin-top: 20px;
+        width: 60%;
+    }
+
+    #verPdf div img:hover{
+        scale: 1;
+    }
+
+    #verPdf div button{
+        color: #fff;
+        background-color: transparent;
+        border: white 2px solid;
+        font-family: 'Lora';
+        font-weight: bolder;
+        font-size: 16px;
+        margin-top: 20px;
+        width: 140px;
+        height: 40px;
+        border-radius: 40px;
+        transition: 0.65s;
+    }
+
+    #verPdf div button:hover{
+        scale: 1.1;
+        transition: 0.65s;
+        background-color: #ffc8cee2;
+    }
+    
+    #guiasUnam, #guiasUam, #guiasUach{
+        border: white 10px solid;
+        width: 95%;
+        height: 290px;
+        left: 0;
+        top: 25px;
+    }
+
+    #cabUnamDes, #cabUamDes, #cabUachDes{
+        height: 32px;
+    }
+
+    #cabUnamDes ul li, #cabUamDes ul li, #cabUachDes ul li{
+        font-size: 13px;
+    }
+
+    #cabUachDes ul li{
+        font-size: 10px;
+        text-align: center;
+    }
+
+    #area1Des, #area2Des, #area3Des, #area4Des{
+        position: relative;
+        width: 100%;
+        height: 10px;
+        top: 0;
+        left: 0;
+    }
+
+    #guiasUach #FUACHDes, #guiasUach #HMUACHDes, #guiasUach #HVUACHDes{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    #guiasUach #FUACHDes{
+        height: 105%;
+    }
+
+    #guiasUach #HMUACHDes{
+        top: -208.35px;
+    }
+
+    #guiasUach #HVUACHDes{
+        top: -427.2px;
+    }
+
+    #guiasUach #FUACHDes #tituloFUACH, #guiasUach #HMUACHDes #tituloHMUACH,
+    #guiasUach #HVUACHDes #tituloHVUACH{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    #guiasUach #FUACHDes #tituloFUACH p, #guiasUach #HMUACHDes #tituloHMUACH p,
+    #guiasUach #HVUACHDes #tituloHVUACH p{
+        font-size: 11px;
+    }
+
+    #guiasUach #FUACHDes #tituloFUACH img, #guiasUach #HMUACHDes #tituloHMUACH img,
+    #guiasUach #HVUACHDes #tituloHVUACH img{
+        width: 75px;
+        height: 100px;
+    }
+
+    #guiasUach #FUACHDes #tituloFUACH button, #guiasUach #HMUACHDes #tituloHMUACH button,
+    #guiasUach #HVUACHDes #tituloHVUACH button{
+        width: 100px;
+        height: 25px;
+        font-size: 9px;
+        padding: 0;
+        transition: 0;
+    }
+
+    #guiasUach #FUACHDes #tituloFUACH button a, #guiasUach #HMUACHDes #tituloHMUACH button a,
+    #guiasUach #HVUACHDes #tituloHVUACH button a{
+        text-decoration: none;
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-style: none;
+        color: #000;
+        font-size: 11px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #guiasUam #CBSDes{
+        position: relative;
+        width: 100%;
+        height: 98%;
+        top: 0;
+        left: 0;
+    }
+
+    #guiasUam #CBIDes, #guiasUam #CADDes, #guiasUam #CSHDes{
+        width: 100%;
+        top: 32.68px;
+    }
+
+    #guiasUam #CSHDes{
+        height: 86%;
+    }
+
+    #sec4 #guiasUam #CBIDes #tituloCBI,
+    #sec4 #guiasUam #CADDes #tituloCAD{
+        width: 110%;
+    }
+
+    #sec4 #guiasUam #CBIDes #imgCBI, #sec4 #guiasUam #CADDes #imgCAD{
+        width: 90%;
+        left: 10%;
+    }
+
+    #area3Des{
+        top: -218.8px;
+    }
+
+    #area2Des{
+        top: -208.79px;
+    }
+
+    #area4Des{
+        top: -228.8px;
+    }
+
+    #area1Des #tituloA1, #area2Des #tituloA2, #area3Des #tituloA3, 
+    #area4Des #tituloA4{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    #CBSDes #imgCBS, #CBIDes #imgCBI{
+        height: 100%;
+        width: 100%;
+        left: 0%;
+    }
+    
+    #area3Des #tituloA3{
+        width:100%;
+    }
+
+    #area1Des #tituloA1 p, #area2Des #tituloA2 p, #area3Des #tituloA3 p,
+    #area4Des #tituloA4 p{
+        font-size: 11px;
+        width: 70%;
+    }
+
+    #CADDes #tituloCAD, #CBIDes #tituloCBI, 
+    #CBSDes #tituloCBS, #CSHDes #tituloCSH{
+        width: 100%;
+    }
+
+    #guiasUam #CADDes #tituloCAD p, #guiasUam #CBIDes #tituloCBI p, 
+    #guiasUam #CBSDes #tituloCBS p, #guiasUam #CSHDes #tituloCSH p{
+        font-size: 11px;
+        width: 120px;
+    }
+
+    #area1Des #tituloA1 img, #area2Des #tituloA2 img, #area3Des #tituloA3 img,
+    #area4Des #tituloA4 img, #guiasUam #CADDes #tituloCAD img, #guiasUam #CBIDes #tituloCBI img, 
+    #guiasUam #CBSDes #tituloCBS img, #guiasUam #CSHDes #tituloCSH img{
+        width: 75px;
+        height: 100px;
+    }
+
+    #area1Des #tituloA1 button, #area2Des #tituloA2 button, #area3Des #tituloA3 button,
+    #area4Des #tituloA4 button, #CADDes #tituloCAD button, #CBIDes #tituloCBI button, 
+    #CBSDes #tituloCBS button, #CSHDes #tituloCSH button{
+        width: 100px;
+        height: 25px;
+        font-size: 9px;
+        padding: 0;
+        transition: 0;
+    }
+
+    #area1Des #tituloA1 button a, #area2Des #tituloA2 button a, 
+    #area3Des #tituloA3 button a, #area4Des #tituloA4 button a,
+    #CADDes #tituloCAD button a, #CBIDes #tituloCBI button a, 
+    #CBSDes #tituloCBS button a, #CSHDes #tituloCSH button a{
+        text-decoration: none;
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-style: none;
+        color: #000;
+        font-size: 11px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #area1Des #tituloA1 button a:hover, #area2Des #tituloA2 button a:hover, 
+    #area3Des #tituloA3 button a:hover, #area4Des #tituloA4 button a:hover,
+    #CADDes #tituloCAD button a:hover, #CBIDes #tituloCBI button a:hover, 
+    #CBSDes #tituloCBS button a:hover, #CSHDes #tituloCSH button a:hover{
+        color: #fff;
+    }
+
+    #area3Des #tituloA3 p{
+        margin: 10px 0px 0px 0px;
+    }
+
+    #area3Des #tituloA3 button{
+        margin-bottom: -1px;
+        margin-top: 20px;
+    }
+
+    #area3Des, #area2Des, #area4Des{
+        visibility: hidden;
+    }
+
+    #area1Des{
+        visibility: visible;
+    }
+
+    #guiasUAEM{
+        width: 90%;
+        height: 330px;
+        top: 12px;
+        left: 0;
+    }
+
+    #guiasUAEM #guiaDes select{
+        width: 80%;
+        height: 30px;
+        font-size: 10px;
+        padding: 0;
+    }
+
+    #guiasUAEM #guiaDes button{
+        width: 120px;
+        font-size: 12px;
+        height: 35px;
+    }
+
+    #guiasUAEM #guiaDes button a{
+        text-decoration: none;
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-style: none;
+        color: rgb(255, 255, 255);
+        font-size: 11px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #TESCHIDes{
+        top: 20px;
+        left: 0;
+        width: 90%;
+        height: 100%;
+    }
+
+    #TESCHIDes img{
+        width: 280px;
+    }
+
+    #TESCHIDes button{
+        width: 170px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    #TESCHIDes button a{
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-decoration: none;
+        font-style: none;
+    }
+
+}
+
+

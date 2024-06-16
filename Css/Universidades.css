@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2? family=Poppins&display=swap');
+
+/*IMPORTO LA TIPOGRAFIA OPEN SANS, ROBOTO, LORA Y OSWALD*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lora';
+}
+
+.Cabecera{
+    position: absolute;
+    width: 100%;
+    height: 4.7vw;
+    color: #fff;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 3fr;
+}
+
+.Cabecera img{
+    visibility: hidden;
+}
+
+#opcionesM{
+    display: flex;
+    top: 0;
+    transition: 2s;
+}
+
+.Cabecera #opcionesM div, .Cabecera #menu{
+    transition: 0.65s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13.7px;
+    font-weight: bold;
+}
+
+.Cabecera #opcionesM div:hover, .Cabecera #menu:hover{
+    transition: 0.65s;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.Cabecera #opcionesM #est:hover{
+    background-image: linear-gradient(to right, #5f1515 0%,#f48484 80% , #f48484 100%) ;
+    background-size: 400% 100%;
+    background-position: 0%;
+}
+
+.Cabecera #uni:hover{
+    background-image: linear-gradient(to right, #9f5908 0%,#f4c084 80% , #f4c084 100%) ;
+    background-size: 400% 100%;
+    animation: colorAnim 0.7s;
+    animation-iteration-count:1;
+    animation-direction: reverse;
+}
+
+.Cabecera #quiz{
+    background-image: linear-gradient(to right, #08449f 0%,#84b1f4 80% , #84b1f4 100%) ;
+    background-size: 400% 100%;
+    animation: colorAnim 0.7s;
+    animation-iteration-count:1;
+    animation-direction: reverse;
+}
+
+.Cabecera #exam:hover{
+    background-image: linear-gradient(to right, #155f30 0%,#6a8a63 80% , #6a8a63 100%) ;
+    background-size: 400% 100%;
+    animation: colorAnim 0.7s;
+    animation-iteration-count:1;
+    animation-direction: reverse;
+}
+
+.Cabecera #foro:hover{
+    background-image: linear-gradient(to right, #3f155f 0%,#c384f4 80% , #c384f4 100%) ;
+    background-size: 400% 100%;
+    animation: colorAnim 0.7s;
+    animation-iteration-count:1;
+    animation-direction: reverse;
+}
+
+.Cabecera #menu{
+    display: flex;
+}
+
+
+@media screen and (max-width: 1200px){
+
+    #caja{
+        position: absolute;
+        visibility: hidden;
+        top: 500px;
+        z-index: 2;
+    }
+
+    .Cabecera{
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+        z-index: 3;
+    }
+
+    .Cabecera #opcionesM{
+        position: relative;
+        display: flex;
+        top: -360px;
+        transition: 0.65s;
+        width: 100%;
+        height: 240px;
+        flex-direction: column;
+        background: #000;
+    }
+
+    .Cabecera #opcionesM div{
+        position: relative;
+        height: 60px;
+    }
+
+    .Cabecera #menu{
+        display: flex;
+        width: 20%;
+        margin: 0px 0px;
+        height: 60px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Cabecera #menu:hover{
+        background-color: rgb(90, 90, 90);
+    }
+
+    #menu label{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Cabecera #menu label img{
+        width: 60%;
+        visibility: visible;
+    }
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+body{
+    background-color: rgb(203, 242, 255);
+}
+
+.titulo{
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    transition: all 200ms;
+}
+
+.videoT{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.videoT video{
+    position: absolute;
+    width: 190%;
+    mix-blend-mode: darken;
+}
+
+.cortinaT{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textoT h1{
+    font-weight: bolder;
+    font-size: 3vw; /* Tamaño de fuente relativo al ancho de la ventana */
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.Seccion_Menu .imagenes img{
+    border: 4px #000 solid;
+    cursor: pointer;
+    margin: 5px;
+    transition: all 400ms;
+}
+
+.Seccion_Menu .imagenes img:hover{
+    transform: scale(0.9);
+    border: 4px rgb(10, 196, 10) solid;
+}
+
+.imagenes{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Caja:checked ~ .titulo{
+    display: none;
+}
+
+#Caja:checked ~ .Seccion_Menu{
+    display: none;
+}
+
+/*Tarjetas*/
+
+.contenedor__tarjeta{
+    position: relative;
+    max-width: 90%;
+    padding: 0px 12.5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-content: center;
+    z-index: 0;
+}
+
+.tarjeta , .tarjeta2, .tarjeta3 , .tarjeta4{ 
+    position: relative;
+    width: 350px;
+    height: 510px; /*Distancia vertical*/
+    transition: all 300ms;
+    cursor: pointer;
+    margin: 100px auto;
+    z-index: 0;
+}
+
+.tarjeta:hover , .tarjeta2:hover, .tarjeta3:hover, .tarjeta4:hover{
+    transform: scale(1.01);
+}
+
+.tarjeta  .fondo, .tarjeta2  .fondo2{
+    width: 100%;
+    height: 355px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tarjeta3 .fondo3, .tarjeta4 .fondo4{
+    width: 100%;
+    height: 355px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.tarjeta .fondo img{
+    width: 300px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 55px;
+    z-index: 1;
+    filter: drop-shadow(5px 5px 4px rgba(0,0,0.5,1));
+    transition: all 400ms;
+}
+.tarjeta2 .fondo2 img{
+    width: 300px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 55px;
+    z-index: 1;
+    filter: drop-shadow(5px 5px 4px rgba(0,0,0.5,1));
+    transition: all 400ms;
+}
+
+.tarjeta3 .fondo3 img{
+    width: 300px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 55px;
+    z-index: 1;
+    filter: drop-shadow(5px 5px 4px rgba(0,0,0.5,1));
+    transition: all 400ms;
+}
+
+.tarjeta4 .fondo4 img{
+    width: 300px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 55px;
+    z-index: 1;
+    filter: drop-shadow(5px 5px 4px rgba(0,0,0.5,1));
+    transition: all 400ms;
+}
+
+.tarjeta:hover .fondo img{
+    filter: none;
+}
+
+.tarjeta2:hover .fondo2 img{
+    filter: none;
+}
+
+.tarjeta3:hover .fondo3 img{
+    filter: none;
+}
+
+.tarjeta4:hover .fondo4 img{
+    filter: none;
+}
+
+
+.tarjeta .img__fondo , .tarjeta2 .img__fondo{
+    width: 100%;
+    height: 280px;
+    position: absolute;
+    bottom: -1000px;
+    left: 0;
+    background-size: cover;
+    border-radius: 20px;
+    transition: all 300ms;
+}
+
+.tarjeta3 .img__fondo , .tarjeta4 .img__fondo{
+    width: 100%;
+    height: 280px;
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    background-size: cover;
+    border-radius: 20px;
+    transition: all 300ms;
+}
+
+.tarjeta .img__fondo{
+    background-image: url(../Imagenes/Fondo.png);
+}
+
+.tarjeta2 .img__fondo{
+    background-image: url(../Imagenes/Fondo.png);
+}
+
+.tarjeta3 .img__fondo{
+    background-image: url(../Imagenes/Fondo.png);
+}
+
+.tarjeta4 .img__fondo{
+    background-image: url(../Imagenes/Fondo.png);
+}
+
+.tarjeta .description , .tarjeta2 .description, .tarjeta3 .description, .tarjeta4 .description{
+    background:  #ffffff;
+    margin-top: -1px;
+    padding: 25px;
+    border-radius: 0px 0px 20px 20px;
+    transition: all 300ms;
+    height: 45vh;
+}
+
+.tarjeta .description h2 , .tarjeta2 .description h2, .tarjeta3 .description h2, .tarjeta4 .description h2{
+    margin-top: 8px;
+}
+
+.tarjeta .description p, .tarjeta2 .description p, .tarjeta3 .description p, .tarjeta4 .description p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    border-bottom: 3px;
+}
+
+.tarjeta .description input , .tarjeta2 .description input, .tarjeta3 .description input, .tarjeta4 .description input{
+    position: relative;
+    padding: 14px 50px;
+    margin-top: 30px;
+    border: none;
+    background: #38b6ff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 300ms;
+}
+
+.tarjeta .description input:hover ,  .tarjeta2 .description input:hover, .tarjeta3 .description input:hover ,  .tarjeta4 .description input:hover{
+    background:#1990d4;
+}
+
+#barras:checked ~ .titulo{
+    margin-top: 360px;
+    transition: all 200ms;
+}
+
+.titulo .videoT .cortinaT .textoT h1{
+    text-align: center;
+}
+
+@media screen and (max-width:700px) {
+    
+    .titulo .videoT .cortinaT{
+        background-color: rgba(0, 0, 0, 40%);
+    }
+
+    .textoT h1 {
+        font-size: 6vw; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
+    }
+
+}

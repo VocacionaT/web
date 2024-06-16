@@ -1,0 +1,467 @@
+/*IMPORTO LA TIPOGRAFIA OPEN SANS, ROBOTO, LORA Y OSWALD*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#contenedor{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../Imagenes/imgSesion/fondoSesion.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#ventanaP{
+    width: 63%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.783);
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 1.7fr 1.5fr 0.3fr;
+}
+
+#ventanaP #cambioReg{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans';
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    transition: 1s;
+}
+
+#Reg, #Inic{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans';
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#Reg{
+    display: flex;
+}
+
+#ventanaP #cambioReg #Reg h1, #ventanaP #cambioReg #Inic h1{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#ventanaP #cambioReg #Reg p, #ventanaP #cambioReg #Inic p{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#ventanaP #cambioReg #Reg button, #ventanaP #cambioReg #Inic button{
+    background: transparent;
+    color: #fff;
+    font-family: 'Open Sans';
+    font-size: 17px;
+    font-weight: bolder;
+    border: white 2px solid;
+    cursor: pointer;
+    padding: 5px 20px;
+    margin-top: 20px;
+    transition: 0.65s;
+}
+
+#ventanaP #cambioReg #Reg button:hover, #ventanaP #cambioReg #Inic button:hover{
+    scale: 1.05;
+    transition: 0.65s;
+    background: rgba(0, 213, 255, 0.416);
+}
+
+#Formulario{
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    background-color: rgba(255, 255, 255);
+    width: 370px;
+    height: 520px;
+    left: 49%;
+    border-radius: 30px;
+    transition: 1s;
+}
+
+#Registro, #InicioSesion{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#Registro{
+    display: flex;
+}
+
+#Registro form, #InicioSesion form{
+    height: 90%;
+    width: 100%;
+    *background-color: rgba(4, 0, 213, 0.411);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Registro form h1, #InicioSesion form h1{
+    font-family: 'Lora';
+    font-weight: bolder;
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: rgb(26, 147, 228);
+}
+
+#Registro form div, #InicioSesion form div{
+    width: 80%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Registro form div p, #InicioSesion form div p{
+    font-family: 'Lora';
+    font-size: 15px;
+    font-weight: bolder;
+    margin-bottom: 3px;
+    color: rgba(55, 114, 202, 0.893);
+}
+
+#InicioSesion form div p{
+    font-size: 20px;
+}
+
+#Registro form input, #InicioSesion form input{
+    height: 35px;
+    width: 80%;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    text-align: center;
+    color: rgba(53, 53, 53, 0.861);
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+#InicioSesion form input{
+    height: 40px;
+    font-size: 17px;
+}
+
+#Registro form button, #InicioSesion form button{
+    cursor: pointer;
+    background: transparent;
+    font-size: 14px;
+    font-weight: bolder;
+    padding: 10px 30px;
+    border-radius: 20px;
+    transition: 0.65s;
+}
+
+#InicioSesion form button{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#Registro form button:hover, #InicioSesion form button:hover{
+    scale: 1.05;
+    background: rgba(0, 213, 255, 0.416);
+    transition: 0.65s;
+}
+
+@media screen and (max-width: 1325px){
+
+    #ventanaP{
+        width: 70%;
+    }
+
+}
+
+
+@media screen and (max-width: 1130px){
+    #ventanaP{
+        width: 78%;
+    }
+}
+
+@media screen and (max-width:980px) {
+    #ventanaP{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 842px){
+    #ventanaP{
+        width: 90%;
+        height: 42%;
+    }
+
+    #Formulario{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 786px){
+    #ventanaP{
+        width: 90%;
+        height: 38%;
+    }
+
+    #ventanaP #cambioReg #Reg h1{
+        font-size: 25px;
+    }
+
+    #ventanaP #cambioReg #Reg p{
+        font-size: 11px;
+    }
+
+    #ventanaP #cambioReg #Reg button{
+        font-size: 11px;
+    }
+
+    #Formulario{
+        width: 310px;
+        height: 440px;
+    }
+
+    #Formulario #Registro form h1{
+        font-size: 23px;
+    }
+
+    #Formulario #Registro form div p{
+        font-size: 14px;
+    }
+
+    #Formulario #Registro form div input{
+        height: 25px;
+        width: 180px;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    #ventanaP{
+        position: absolute;
+        top: 5%;
+        width: 75%;
+        height: 50%;
+        display: flex;
+    }
+
+    #ventanaP #cambioReg{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #cambioReg #Reg{
+        position: relative;
+        height: 50%;
+        width: 90%;
+        top: -85px;
+    }
+
+    #ventanaP #cambioReg #Reg h1{
+        font-size: 30px;
+    }
+
+    #ventanaP #cambioReg #Reg p{
+        font-size: 13px;
+    }
+
+    #ventanaP #cambioReg #Reg button{
+        font-size: 13px;
+    }
+
+    #Formulario{
+        top: 28%;
+        left: 16%;
+        width: 68%;
+        height: 68%;
+    }
+
+    #Formulario #Registro form h1{
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    #Formulario #Registro form div p{
+        font-size: 16px;
+    }
+
+    #Formulario #Registro form div input{
+        height: 30px;
+        width: 240px;
+        font-size: 10px;
+    }
+
+    #Formulario #Registro form div{
+        margin: 0;
+    }
+
+    #Formulario #Registro form button{
+        font-size: 16px;
+        padding: 10px 10px;
+    }
+    
+}
+
+@media screen and (max-width: 508px){
+
+    #ventanaP{
+        position: absolute;
+        top: 5%;
+        width: 75%;
+        height: 50%;
+        display: flex;
+    }
+
+    #ventanaP #cambioReg{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #cambioReg #Reg{
+        position: relative;
+        height: 50%;
+        width: 90%;
+        top: -85px;
+    }
+
+    #ventanaP #cambioReg #Reg h1{
+        font-size: 24px;
+    }
+
+    #ventanaP #cambioReg #Reg p{
+        font-size: 11px;
+    }
+
+    #ventanaP #cambioReg #Reg button{
+        font-size: 11px;
+    }
+
+    #Formulario{
+        top: 27%;
+        left: 16%;
+        width: 68%;
+        height: 68%;
+    }
+
+    #Formulario #Registro form h1{
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    #Formulario #Registro form div p{
+        font-size: 16px;
+    }
+
+    #Formulario #Registro form div input{
+        height: 30px;
+        width: 240px;
+        font-size: 10px;
+    }
+
+    #Formulario #Registro form div{
+        margin: 0;
+    }
+
+    #Formulario #Registro form button{
+        font-size: 16px;
+        padding: 10px 10px;
+    }
+}
+
+
+@media screen and (max-width: 406px){
+
+    #ventanaP{
+        position: absolute;
+        top: 5%;
+        width: 80%;
+        height: 50%;
+        display: flex;
+        transition: 1s;
+    }
+
+    #ventanaP #cambioReg{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #cambioReg #Reg{
+        position: relative;
+        height: 50%;
+        width: 90%;
+        top: -85px;
+    }
+
+    #cambioReg #Inic{
+        position: relative;
+        height: 50%;
+        width: 90%;
+        top: 10px;
+        transition: 1s;
+    }
+
+    #ventanaP #cambioReg #Reg h1, #ventanaP #cambioReg #Inic h1{
+        font-size: 22px;
+    }
+
+    #ventanaP #cambioReg #Reg p, #ventanaP #cambioReg #Inic p{
+        font-size: 11px;
+    }
+
+    #ventanaP #cambioReg #Reg button, #ventanaP #cambioReg #Inic button{
+        font-size: 11px;
+    }
+
+    #Formulario{
+        top: 27%;
+        left: 15%;
+        width: 70%;
+        height: 60%;
+    }
+
+    #Formulario #Registro form h1,#Formulario #InicioSesion form h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    #Formulario #Registro form div p,#Formulario #InicioSesion form div p{
+        font-size: 15px;
+    }
+
+    #Formulario #Registro form div input, #Formulario #InicioSesion form input{
+        height: 30px;
+        width: 180px;
+        font-size: 10px;
+    }
+
+    #Formulario #Registro form div{
+        margin: 0;
+    }
+
+    #Formulario #Registro form button, #Formulario #InicioSesion form button{
+        font-size: 14px;
+        padding: 10px 10px;
+    }
+    
+}
